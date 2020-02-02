@@ -61,6 +61,12 @@ python main.py -f rastrigin -p 100 -s 50 -w 0.5 -c1 0.75 -c2 1.0 -o examples/ras
 ```
 ![](examples/rastrigin.gif)
 
+### Levi N.13 function
+```
+python main.py -f levi_13 -p 100 -s 50 -w 1.0 -c1 1.0 -c2 1.5 -r -4 4  -o examples/levi_13.gif
+```
+![](examples/levi_13.gif)
+
 ### Beale function
 ```
 python main.py -f beale -p 100 -s 50 -w 1.3 -c1 1.0 -c2 0.6 -o examples/beale.gif

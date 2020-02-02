@@ -10,7 +10,7 @@ if __name__ == "__main__":
         dest="f",
         help="Function to optimize. Has to be defined in "
         'src/functions.py. Currently availables: "beale", '
-        '"rosenbrock", "rastrigin" and "beale"',
+        '"rosenbrock", "rastrigin", "levi_13" and "beale"',
         default="beale",
     )
 
