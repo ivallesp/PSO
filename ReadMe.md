@@ -69,3 +69,4 @@ python main.py -f beale -p 100 -s 50 -w 1.3 -c1 1.0 -c2 0.6 -o examples/beale.gi
 Feel free to send issues or pull requests if you want to collaborate.
 
 ## License
+This repository is licensed under MIT license. More info in the `LICENSE` file. Copyright (c) 2020 Iván Vallés Pérez
