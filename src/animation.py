@@ -16,6 +16,7 @@ def generate_animation(
     init_range=[-1, 1],
     plot_range=[-1, 1],
     fps=10,
+    seed=655321,
     filepath="animation.gif",
 ):
     """Runs a PSO metaheuristic over the function provided and generates an
@@ -36,6 +37,7 @@ def generate_animation(
         filepath (str, optional): Filepath to save the animation. Defaults to
         "animation.gif".
     """
+    np.random.seed(seed)
     # Retrieve the function specified
     f = get_test_function(f)
     # Generate the meshgrid and values for contour plot
