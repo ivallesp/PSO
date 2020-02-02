@@ -18,7 +18,7 @@ if __name__ == "__main__":
         "-p",
         action="store",
         dest="n_particles",
-        help="Number of articles",
+        help="Number of particles",
         type=int,
         default=100,
     )
