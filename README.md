@@ -4,12 +4,13 @@ This repository contains a simple PSO implementation to play with.
 
 ## Getting started
 1. Install [pyenv](https://github.com/pyenv/pyenv) and [poetry](https://python-poetry.org/) in your system following the linked official guides.
-2. Run `pyenv install 3.8.0` in your terminal for installing the required python.
+2. Open a terminal, clone this repository and `cd` to the cloned folder.
+3. Run `pyenv install 3.8.0` in your terminal for installing the required python.
    version
-3. Configure poetry with `poetry config virtualenvs.in-project true`
-4. Create the virtual environment with `poetry install`
-5. Activate the environment with `source .venv/bin/activate`
-6. Try the algorithm with the default parameters `python main.py`
+4. Configure poetry with `poetry config virtualenvs.in-project true`
+5. Create the virtual environment with `poetry install`
+6. Activate the environment with `source .venv/bin/activate`
+7. Try the algorithm with the default parameters `python main.py`
 
 If everything goes well, it will create a file called `animation.gif` in the examples
 folder.
