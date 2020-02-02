@@ -1,2 +1,9 @@
+# Virtualenv folder
 .venv
+
+# Jupyter notebooks folder
 notebooks
+
+# IDEs config folders
+.vscode
+.idea
