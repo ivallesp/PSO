@@ -29,7 +29,7 @@ optional arguments:
   -h, --help            show this help message and exit
   -f F                  Function to optimize. Has to be defined in
                         src/functions.py. Currently availables: "beale",
-                        "rosenbrock" and "beale"
+                        "rosenbrock", "rastrigin" and "beale"
   -p N_PARTICLES        Number of articles
   -w W                  Inertia coefficient
   -c1 C1                Cognitive coefficient
@@ -54,6 +54,12 @@ python main.py -f bowl -p 100 -s 50 -w 0.3 -c1 0.4 -c2 0.2 -o examples/bowl.gif
 python main.py -f rosenbrock -p 100 -s 50 -w 1.3 -c1 0.4 -c2 0.7 -o examples/rosenbrock.gif
 ```
 ![](examples/rosenbrock.gif)
+
+### Rastrigin function
+```
+python main.py -f rastrigin -p 100 -s 50 -w 0.5 -c1 0.75 -c2 1.0 -o examples/rastrigin.gif
+```
+![](examples/rastrigin.gif)
 
 ### Beale function
 ```

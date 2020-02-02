@@ -25,3 +25,9 @@ def beale(x, y):
         + (2.25 - x + x * y ** 2) ** 2
         + (2.625 - x + x * y ** 3) ** 2
     ) / 10
+
+
+def rastrigin(x, y):
+    return (
+        20 + x ** 2 - 10 * np.cos(2 * np.pi * x) + y ** 2 - 10 * np.cos(2 * np.pi * y)
+    )
