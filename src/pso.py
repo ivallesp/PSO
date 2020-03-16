@@ -17,7 +17,7 @@ class PSO:
         self.c1 = c1
         self.c2 = c2
         self.init_range = init_range
-        self.pos, self.speed = self._initialize(n_particles, n_dims, init_range)
+        self.pos, self.delta_pos = self._initialize(n_particles, n_dims, init_range)
         # Best particle positions and values
         self.best_p_pos = self.pos.copy()
         self.best_p_val = np.ones(n_particles) * np.Inf
@@ -36,8 +36,8 @@ class PSO:
     def _initialize(n_particles, n_dims, init_range):
         _max, _min = max(init_range), min(init_range)
         pos = np.random.uniform(low=_min, high=_max, size=(n_particles, n_dims))
-        speed = np.zeros((n_particles, n_dims))
-        return pos, speed
+        delta_pos = np.zeros((n_particles, n_dims))
+        return pos, delta_pos
 
     def step(self, evaluations):
         # Update the best particle values and positions
@@ -47,7 +47,7 @@ class PSO:
 
         # Calculate the inertia component
         r = np.random.uniform(low=0, high=self.w, size=(self.pos.shape[0], 1))
-        inertia = self.speed * r
+        inertia = self.delta_pos * r
 
         # Calculate the cognitive component
         r = np.random.uniform(low=0, high=self.c1, size=(self.pos.shape[0], 1))
@@ -57,6 +57,6 @@ class PSO:
         r = np.random.uniform(low=0, high=self.c2, size=(self.pos.shape[0], 1))
         social = (self.best_g_pos - self.pos) * r
 
-        self.speed = inertia + cognitive + social
-        self.pos = self.pos + self.speed
+        self.delta_pos = inertia + cognitive + social
+        self.pos = self.pos + self.delta_pos
         return self.pos
